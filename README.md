@@ -12,7 +12,13 @@ It is a single static page with no build step. Three.js loads from the jsDelivr 
 python -m http.server 3600
 ```
 
-Then open http://127.0.0.1:3600. Any static host works (Cloudflare Pages, GitHub Pages, Netlify): serve `index.html` from the repo root.
+Then open http://127.0.0.1:3600. Any static host works: serve `index.html` from the repo root.
+
+## Deploy
+
+Live at https://tesla-roadster-39i.pages.dev (Cloudflare Pages project `tesla-roadster`).
+
+Every push to `main` redeploys through `.github/workflows/deploy.yml` once the repo has a `CLOUDFLARE_API_TOKEN` secret: a Cloudflare API token with the **Cloudflare Pages: Edit** permission.
 
 ## Controls
 
